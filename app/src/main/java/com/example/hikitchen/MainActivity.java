@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private Rect r;
 
     //Fragment Object
-    private MyFragment fg1, fg2, fg3, fg4;
+    private HomeFragment fg1;
+    private KindsFragment fg3;
+    private CommunityFragment fg2;
+    private MyFragment fg4;
     private FragmentManager fManager;
     private RadioButton rb[];
     /**
@@ -73,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         switch (checkedId) {
             case R.id.rb_home:
                 if (fg1 == null) {
-                    fg1 = MyFragment.newInstance("第一个Fragment");
+                    fg1= HomeFragment.newInstance("fcgrcf");
                     fTransaction.add(R.id.ly_content, fg1);
                 } else {
                     fTransaction.show(fg1);
@@ -82,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_community:
                 if (fg2 == null) {
-                    fg2 = MyFragment.newInstance("第二个Fragment");
+                    fg2 = CommunityFragment.newInstance("第二个Fragment");
 
                     fTransaction.add(R.id.ly_content, fg2);
                 } else {
@@ -92,8 +95,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_kinds:
                 if (fg3 == null) {
-                    fg3 = MyFragment.newInstance("第三个Fragment");
-
+                    fg3 = KindsFragment.newInstance();
                     fTransaction.add(R.id.ly_content, fg3);
                 } else {
                     fTransaction.show(fg3);

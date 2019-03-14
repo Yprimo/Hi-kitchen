@@ -1,0 +1,674 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_white"
+        android:orientation="vertical">
+       <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   菜系  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_lucai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="鲁菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_chuancai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="川菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_yuecai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="粤菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_huaiyangcai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="淮扬菜"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_zhecai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="浙菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_mincai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="闽菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_huicai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="徽菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_xiangcai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="湘菜"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_ribencai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="日本菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_hanguocai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="韩国菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_faguocai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="法国菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_yidalicai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="意大利菜"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_taiguocai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/text_background"
+                android:text="泰国菜"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   主食  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_mianshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="面食"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_mifan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="米饭"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_bing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="饼类"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_zhou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="粥"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   烘焙  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_dangao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="蛋糕"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_mianbao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="面包"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_binggan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="饼干"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_pisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="披萨"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   肉类  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_zhurou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="猪肉"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_yangrou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="羊肉"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_niurou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="牛肉"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_jirou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="鸡肉"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_yarou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/text_background"
+                android:text="鸭肉"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   海鲜水产  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_caoyu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="草鱼"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_luyu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="鲈鱼"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_daiyu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="带鱼"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_sanwenyu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="三文鱼"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_虾仁"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/text_background"
+                android:text="虾仁"
+                android:textColor="@color/text_black" />
+            <Button
+                android:id="@+id/bt_wenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/text_background"
+                android:text="文蛤"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   禽蛋类  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_jidan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="鸡蛋"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_anchundan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="鹌鹑蛋"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_xiandan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="咸蛋"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_pidan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="皮蛋"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   蔬菜类  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_qiezi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="茄子"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_huluobu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="胡萝卜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_baicai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="白菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_wosun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="莴笋"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_shengcai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="生菜"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_xilanhua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="西兰花"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_xihongshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="西红柿"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_shanyao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="山药"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   汤羹饮品  >"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_guozhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="果汁"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_dunpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="炖品"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_guochayinpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="果茶饮品"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_bingpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/text_background"
+                android:text="冰品"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_tanggeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/text_background"
+                android:text="汤羹"
+                android:textColor="@color/text_black" />
+
+            <Button
+                android:id="@+id/bt_tangshui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/text_background"
+                android:text="糖水"
+                android:textColor="@color/text_black" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

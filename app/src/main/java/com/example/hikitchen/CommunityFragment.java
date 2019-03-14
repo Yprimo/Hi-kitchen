@@ -1,5 +1,7 @@
 package com.example.hikitchen;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,19 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MyFragment.OnFragmentInteractionListener} interface
+ * {@link CommunityFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MyFragment#newInstance} factory method to
+ * Use the {@link CommunityFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyFragment extends Fragment {
-
+public class CommunityFragment extends Fragment {
     private String content;
-    public static MyFragment newInstance(String content) {
-        MyFragment newFragment = new MyFragment();
+    public static CommunityFragment newInstance(String content) {
+        CommunityFragment newFragment = new CommunityFragment();
         Bundle bundle = new Bundle();
         bundle.putString("content", content);
         newFragment.setArguments(bundle);
@@ -27,8 +29,8 @@ public class MyFragment extends Fragment {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my,container,false);
-        TextView txt_content = (TextView) view.findViewById(R.id.fg_my);
+        View view = inflater.inflate(R.layout.fragment_community,container,false);
+        TextView txt_content = (TextView) view.findViewById(R.id.fg_community);
         txt_content.setText(content);
         return view;
     }

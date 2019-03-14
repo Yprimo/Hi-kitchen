@@ -5,7 +5,7 @@
     android:background="@color/background_white">
 
     <TextView
-            android:id="@+id/txt_content"
+            android:id="@+id/fg_my"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
