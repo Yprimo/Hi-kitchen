@@ -1,5 +1,8 @@
 package com.example.hikitchen.gson;
 
+import org.json.JSONArray;
+
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -9,11 +12,11 @@ import java.util.ArrayList;
 public class Menu {
     public int id;
     public String title;
-    public String tags;
-    public String imtro;
-    public String ingredients;
-    public String burden;
-    public ArrayList albumslist;
+    public String tags;//标签
+    public String imtro;//简介
+    public String ingredients;//原材料
+    public String burden;//配料
+    public JSONArray albumslist;
     public int getId(){
         return id;
     }
@@ -51,11 +54,11 @@ public class Menu {
         this.burden = burden;
     }
 
-    public ArrayList getAlbumslist() {
+    public JSONArray getAlbumslist() {
         return albumslist;
     }
 
-    public void setAlbumslist(ArrayList albumslist) {
+    public void setAlbumslist(JSONArray albumslist) {
         this.albumslist = albumslist;
     }
 }

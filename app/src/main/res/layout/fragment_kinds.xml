@@ -212,7 +212,7 @@
                 android:textColor="@color/text_black" />
 
             <Button
-                android:id="@+id/bt_bing"
+                android:id="@+id/bt_binglei"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -419,7 +419,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/bt_虾仁"
+                android:id="@+id/bt_xiaren"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -514,7 +514,7 @@
                 android:textColor="@color/text_black" />
 
             <Button
-                android:id="@+id/bt_huluobu"
+                android:id="@+id/bt_huluobo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
