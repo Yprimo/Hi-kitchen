@@ -14,6 +14,7 @@ import com.example.hikitchen.gson.Menu;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,35 +24,32 @@ import java.util.List;
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 
     private int resourceId;
-    private List<Menu>mMenuList;
+    private List<Menu>mMenuList=new ArrayList<>();;
     static class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView menuImage;
+       // ImageView menuImage;
         TextView menutitle;
         public ViewHolder(View view){
             super(view);
-            menuImage=(ImageView)view.findViewById(R.id.menu_image);
+       //     menuImage=(ImageView)view.findViewById(R.id.menu_image);
             menutitle=(TextView)view.findViewById(R.id.menu_title);
 
         }
-
     }
     public MenuAdapter(List<Menu>menuList) {
-      mMenuList=menuList;
+        mMenuList=menuList;
     }
-   public ViewHolder onCreatView(ViewGroup parent,int viewType){
+    public ViewHolder onCreateViewHolder(ViewGroup parent,int viewType){
        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_item,parent,false);
        ViewHolder holder=new ViewHolder(view);
        return holder;
    }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
-    }
+
 
     public void onBindViewHolder(ViewHolder holder, int position){
         Menu menu =mMenuList.get(position);
-     //   holder.menuImage.setImageResource(menu.getAlbumslist());
+       // holder.menuImage.setImageResource(menu.getAlbums());
         holder.menutitle.setText(menu.getTitle());
     }
     public int getItemCount(){

@@ -2,6 +2,7 @@ package com.example.hikitchen;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -154,9 +155,15 @@ import android.widget.Toast;
 
     @Override
     public void onClick(View v) {
+        //int id;
+        Context context = getActivity();
         switch(v.getId()){
             case R.id.bt_lucai:
-                Toast.makeText(getActivity(), "nihao1", Toast.LENGTH_LONG).show();
+                int id=13;
+                Intent intent=new Intent(context,GetMenuActivity.class);
+                intent.putExtra("ID",id);
+                startActivity(intent);
+               // Toast.makeText(getActivity(), "nihao1", Toast.LENGTH_LONG).show();
                 break;
             case R.id.bt_chuancai:
                 Toast.makeText(getActivity(), "nihao2", Toast.LENGTH_LONG).show();

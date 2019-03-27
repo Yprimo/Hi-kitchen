@@ -4,6 +4,7 @@ import org.json.JSONArray;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 杨凯-pc on 2019/3/13.
@@ -16,7 +17,8 @@ public class Menu {
     public String imtro;//简介
     public String ingredients;//原材料
     public String burden;//配料
-    public JSONArray albumslist;
+    public String albums;
+    public List<Steps>stepslist;
     public int getId(){
         return id;
     }
@@ -53,12 +55,17 @@ public class Menu {
     public void setBurden(String burden) {
         this.burden = burden;
     }
-
-    public JSONArray getAlbumslist() {
-        return albumslist;
+    public String getAlbums() {
+        return albums;
+    }
+    public void setAlbums(String albums) {
+        this.albums = albums;
+    }
+    public List<Steps> getSteps() {
+        return stepslist;
+    }
+    public void setSteps(List<Steps>steps) {
+        this.stepslist= steps;
     }
 
-    public void setAlbumslist(JSONArray albumslist) {
-        this.albumslist = albumslist;
-    }
 }
