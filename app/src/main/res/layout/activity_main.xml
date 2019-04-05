@@ -66,7 +66,7 @@
             android:id="@+id/rb_my"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_my"
-            android:text="我的"/>
+            android:text="我的my"/>
 
     </RadioGroup>
 
