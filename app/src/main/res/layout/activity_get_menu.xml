@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ly_top_bar">
+        android:layout_below="@+id/ly_top_bar">//控制布局在top_bar控件下方
         <android.support.v7.widget.RecyclerView
         android:id="@+id/menu_title_recycle_view"
         android:layout_width="match_parent"

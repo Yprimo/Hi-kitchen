@@ -22,23 +22,25 @@ import android.widget.Toast;
  * Use the {@link KindsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-    public class KindsFragment extends Fragment implements View.OnClickListener{
+public class KindsFragment extends Fragment implements View.OnClickListener {
     //private String content;
     public static KindsFragment newInstance() {
         KindsFragment newFragment = new KindsFragment();
-       // Bundle bundle = new Bundle();
-       // bundle.putString("content", content);
-       // newFragment.setArguments(bundle);
+        // Bundle bundle = new Bundle();
+        // bundle.putString("content", content);
+        // newFragment.setArguments(bundle);
         return newFragment;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_kinds,container,false);
+        View view = inflater.inflate(R.layout.fragment_kinds, container, false);
         //TextView txt_content = (TextView) view.findViewById(R.id.fg_kinds);
         //txt_content.setText(content);
 
         return view;
     }
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         /*
@@ -49,271 +51,271 @@ import android.widget.Toast;
         */
 
     }
+
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button buttonLucai=(Button)getActivity().findViewById(R.id.bt_lucai);
+        //初始化按钮控件
+        Button buttonLucai = (Button) getActivity().findViewById(R.id.bt_lucai);
         buttonLucai.setOnClickListener(this);
-        Button buttonChuancai=(Button)getActivity().findViewById(R.id.bt_chuancai);
+        Button buttonChuancai = (Button) getActivity().findViewById(R.id.bt_chuancai);
         buttonChuancai.setOnClickListener(this);
-        Button buttonLYuecai=(Button)getActivity().findViewById(R.id.bt_yuecai);
+        Button buttonLYuecai = (Button) getActivity().findViewById(R.id.bt_yuecai);
         buttonLYuecai.setOnClickListener(this);
-        Button buttonHuaiynagcai=(Button)getActivity().findViewById(R.id.bt_huaiyangcai);
+        Button buttonHuaiynagcai = (Button) getActivity().findViewById(R.id.bt_huaiyangcai);
         buttonHuaiynagcai.setOnClickListener(this);
-        Button buttonZhecai=(Button)getActivity().findViewById(R.id.bt_zhecai);
+        Button buttonZhecai = (Button) getActivity().findViewById(R.id.bt_zhecai);
         buttonZhecai.setOnClickListener(this);
-        Button buttonMincai=(Button)getActivity().findViewById(R.id.bt_mincai);
+        Button buttonMincai = (Button) getActivity().findViewById(R.id.bt_mincai);
         buttonMincai.setOnClickListener(this);
-        Button buttonHuicai=(Button)getActivity().findViewById(R.id.bt_huicai);
+        Button buttonHuicai = (Button) getActivity().findViewById(R.id.bt_huicai);
         buttonHuicai.setOnClickListener(this);
-        Button buttonXiangcai=(Button)getActivity().findViewById(R.id.bt_xiangcai);
+        Button buttonXiangcai = (Button) getActivity().findViewById(R.id.bt_xiangcai);
         buttonXiangcai.setOnClickListener(this);
-        Button buttonRibencai=(Button)getActivity().findViewById(R.id.bt_ribencai);
+        Button buttonRibencai = (Button) getActivity().findViewById(R.id.bt_ribencai);
         buttonRibencai.setOnClickListener(this);
-        Button buttonHanguocai=(Button)getActivity().findViewById(R.id.bt_hanguocai);
+        Button buttonHanguocai = (Button) getActivity().findViewById(R.id.bt_hanguocai);
         buttonHanguocai.setOnClickListener(this);
-        Button buttonFaguocai=(Button)getActivity().findViewById(R.id.bt_faguocai);
+        Button buttonFaguocai = (Button) getActivity().findViewById(R.id.bt_faguocai);
         buttonFaguocai.setOnClickListener(this);
-        Button buttonYidalicai=(Button)getActivity().findViewById(R.id.bt_yidalicai);
+        Button buttonYidalicai = (Button) getActivity().findViewById(R.id.bt_yidalicai);
         buttonYidalicai.setOnClickListener(this);
-        Button buttonTaiguocai=(Button)getActivity().findViewById(R.id.bt_taiguocai);
+        Button buttonTaiguocai = (Button) getActivity().findViewById(R.id.bt_taiguocai);
         buttonTaiguocai.setOnClickListener(this);
-        Button buttonMianshi=(Button)getActivity().findViewById(R.id.bt_mianshi);
+        Button buttonMianshi = (Button) getActivity().findViewById(R.id.bt_mianshi);
         buttonMianshi.setOnClickListener(this);
-        Button buttonMifan=(Button)getActivity().findViewById(R.id.bt_mifan);
+        Button buttonMifan = (Button) getActivity().findViewById(R.id.bt_mifan);
         buttonMifan.setOnClickListener(this);
-        Button buttonBinglei=(Button)getActivity().findViewById(R.id.bt_binglei);
+        Button buttonBinglei = (Button) getActivity().findViewById(R.id.bt_binglei);
         buttonBinglei.setOnClickListener(this);
-        Button buttonZhou=(Button)getActivity().findViewById(R.id.bt_zhou);
+        Button buttonZhou = (Button) getActivity().findViewById(R.id.bt_zhou);
         buttonZhou.setOnClickListener(this);
-        Button buttonDangao=(Button)getActivity().findViewById(R.id.bt_dangao);
+        Button buttonDangao = (Button) getActivity().findViewById(R.id.bt_dangao);
         buttonDangao.setOnClickListener(this);
-        Button buttonMianbao=(Button)getActivity().findViewById(R.id.bt_mianbao);
+        Button buttonMianbao = (Button) getActivity().findViewById(R.id.bt_mianbao);
         buttonMianbao.setOnClickListener(this);
-        Button buttonBinggan=(Button)getActivity().findViewById(R.id.bt_binggan);
+        Button buttonBinggan = (Button) getActivity().findViewById(R.id.bt_binggan);
         buttonBinggan.setOnClickListener(this);
-        Button buttonPisa=(Button)getActivity().findViewById(R.id.bt_pisa);
+        Button buttonPisa = (Button) getActivity().findViewById(R.id.bt_pisa);
         buttonPisa.setOnClickListener(this);
-        Button buttonZhurou=(Button)getActivity().findViewById(R.id.bt_zhurou);
+        Button buttonZhurou = (Button) getActivity().findViewById(R.id.bt_zhurou);
         buttonZhurou.setOnClickListener(this);
-        Button buttonYangrou=(Button)getActivity().findViewById(R.id.bt_yangrou);
+        Button buttonYangrou = (Button) getActivity().findViewById(R.id.bt_yangrou);
         buttonYangrou.setOnClickListener(this);
-        Button buttonNiurou=(Button)getActivity().findViewById(R.id.bt_niurou);
+        Button buttonNiurou = (Button) getActivity().findViewById(R.id.bt_niurou);
         buttonNiurou.setOnClickListener(this);
-        Button buttonJirou=(Button)getActivity().findViewById(R.id.bt_jirou);
+        Button buttonJirou = (Button) getActivity().findViewById(R.id.bt_jirou);
         buttonJirou.setOnClickListener(this);
-        Button buttonYarou=(Button)getActivity().findViewById(R.id.bt_yarou);
+        Button buttonYarou = (Button) getActivity().findViewById(R.id.bt_yarou);
         buttonYarou.setOnClickListener(this);
-        Button buttonCaoyu=(Button)getActivity().findViewById(R.id.bt_caoyu);
+        Button buttonCaoyu = (Button) getActivity().findViewById(R.id.bt_caoyu);
         buttonCaoyu.setOnClickListener(this);
-        Button buttonLuyu=(Button)getActivity().findViewById(R.id.bt_luyu);
+        Button buttonLuyu = (Button) getActivity().findViewById(R.id.bt_luyu);
         buttonLuyu.setOnClickListener(this);
-        Button buttonDaiyu=(Button)getActivity().findViewById(R.id.bt_daiyu);
+        Button buttonDaiyu = (Button) getActivity().findViewById(R.id.bt_daiyu);
         buttonDaiyu.setOnClickListener(this);
-        Button buttonSanwenyu=(Button)getActivity().findViewById(R.id.bt_sanwenyu);
+        Button buttonSanwenyu = (Button) getActivity().findViewById(R.id.bt_sanwenyu);
         buttonSanwenyu.setOnClickListener(this);
-        Button buttonXiaren=(Button)getActivity().findViewById(R.id.bt_xiaren);
+        Button buttonXiaren = (Button) getActivity().findViewById(R.id.bt_xiaren);
         buttonXiaren.setOnClickListener(this);
-        Button buttonWenge=(Button)getActivity().findViewById(R.id.bt_wenge);
+        Button buttonWenge = (Button) getActivity().findViewById(R.id.bt_wenge);
         buttonWenge.setOnClickListener(this);
-        Button buttonJidan=(Button)getActivity().findViewById(R.id.bt_jidan);
+        Button buttonJidan = (Button) getActivity().findViewById(R.id.bt_jidan);
         buttonJidan.setOnClickListener(this);
-        Button buttonAnchundan=(Button)getActivity().findViewById(R.id.bt_anchundan);
+        Button buttonAnchundan = (Button) getActivity().findViewById(R.id.bt_anchundan);
         buttonAnchundan.setOnClickListener(this);
-        Button buttonXiandan=(Button)getActivity().findViewById(R.id.bt_xiandan);
+        Button buttonXiandan = (Button) getActivity().findViewById(R.id.bt_xiandan);
         buttonXiandan.setOnClickListener(this);
-        Button buttonPidan=(Button)getActivity().findViewById(R.id.bt_pidan);
+        Button buttonPidan = (Button) getActivity().findViewById(R.id.bt_pidan);
         buttonPidan.setOnClickListener(this);
-        Button buttonQiezi=(Button)getActivity().findViewById(R.id.bt_qiezi);
+        Button buttonQiezi = (Button) getActivity().findViewById(R.id.bt_qiezi);
         buttonQiezi.setOnClickListener(this);
-        Button buttonHuluobo=(Button)getActivity().findViewById(R.id.bt_huluobo);
+        Button buttonHuluobo = (Button) getActivity().findViewById(R.id.bt_huluobo);
         buttonHuluobo.setOnClickListener(this);
-        Button buttonBaicai=(Button)getActivity().findViewById(R.id.bt_baicai);
+        Button buttonBaicai = (Button) getActivity().findViewById(R.id.bt_baicai);
         buttonBaicai.setOnClickListener(this);
-        Button buttonWosun=(Button)getActivity().findViewById(R.id.bt_wosun);
+        Button buttonWosun = (Button) getActivity().findViewById(R.id.bt_wosun);
         buttonWosun.setOnClickListener(this);
-        Button buttonShengcai=(Button)getActivity().findViewById(R.id.bt_shengcai);
+        Button buttonShengcai = (Button) getActivity().findViewById(R.id.bt_shengcai);
         buttonShengcai.setOnClickListener(this);
-        Button buttonXilanhua=(Button)getActivity().findViewById(R.id.bt_xilanhua);
+        Button buttonXilanhua = (Button) getActivity().findViewById(R.id.bt_xilanhua);
         buttonXilanhua.setOnClickListener(this);
-        Button buttonXihongshi=(Button)getActivity().findViewById(R.id.bt_xihongshi);
+        Button buttonXihongshi = (Button) getActivity().findViewById(R.id.bt_xihongshi);
         buttonXihongshi.setOnClickListener(this);
-        Button buttonShanyao=(Button)getActivity().findViewById(R.id.bt_shanyao);
+        Button buttonShanyao = (Button) getActivity().findViewById(R.id.bt_shanyao);
         buttonShanyao.setOnClickListener(this);
-        Button buttonGuozhi=(Button)getActivity().findViewById(R.id.bt_guozhi);
+        Button buttonGuozhi = (Button) getActivity().findViewById(R.id.bt_guozhi);
         buttonGuozhi.setOnClickListener(this);
-        Button buttonDunpin=(Button)getActivity().findViewById(R.id.bt_dunpin);
+        Button buttonDunpin = (Button) getActivity().findViewById(R.id.bt_dunpin);
         buttonDunpin.setOnClickListener(this);
-        Button buttonGuochayinpin=(Button)getActivity().findViewById(R.id.bt_guochayinpin);
+        Button buttonGuochayinpin = (Button) getActivity().findViewById(R.id.bt_guochayinpin);
         buttonGuochayinpin.setOnClickListener(this);
-        Button buttonBingpin=(Button)getActivity().findViewById(R.id.bt_bingpin);
+        Button buttonBingpin = (Button) getActivity().findViewById(R.id.bt_bingpin);
         buttonBingpin.setOnClickListener(this);
-        Button buttonTanggeng=(Button)getActivity().findViewById(R.id.bt_tanggeng);
+        Button buttonTanggeng = (Button) getActivity().findViewById(R.id.bt_tanggeng);
         buttonTanggeng.setOnClickListener(this);
-        Button buttonTangshui=(Button)getActivity().findViewById(R.id.bt_tangshui);
+        Button buttonTangshui = (Button) getActivity().findViewById(R.id.bt_tangshui);
         buttonTangshui.setOnClickListener(this);
     }
 
     @Override
+    //判断点击的是哪个按钮，并设置id
     public void onClick(View v) {
-        //int id;
+        int id = 0;
         Context context = getActivity();
-        switch(v.getId()){
+        switch (v.getId()) {
             case R.id.bt_lucai:
-                int id=13;
-                Intent intent=new Intent(context,GetMenuActivity.class);
-                intent.putExtra("ID",id);
-                startActivity(intent);
-               // Toast.makeText(getActivity(), "nihao1", Toast.LENGTH_LONG).show();
+                id = 13;
                 break;
             case R.id.bt_chuancai:
-                Toast.makeText(getActivity(), "nihao2", Toast.LENGTH_LONG).show();
+                id = 10;
                 break;
             case R.id.bt_yuecai:
-                Toast.makeText(getActivity(), "nihao3", Toast.LENGTH_LONG).show();
+                id = 11;
                 break;
             case R.id.bt_huaiyangcai:
-                Toast.makeText(getActivity(), "nihao4", Toast.LENGTH_LONG).show();
+                id = 115;
                 break;
             case R.id.bt_zhecai:
-                Toast.makeText(getActivity(), "nihao5", Toast.LENGTH_LONG).show();
+                id = 102;
                 break;
             case R.id.bt_mincai:
-                Toast.makeText(getActivity(), "nihao6", Toast.LENGTH_LONG).show();
+                id = 101;
                 break;
             case R.id.bt_huicai:
-                Toast.makeText(getActivity(), "nihao7", Toast.LENGTH_LONG).show();
+                id = 105;
                 break;
             case R.id.bt_xiangcai:
-                Toast.makeText(getActivity(), "nihao8", Toast.LENGTH_LONG).show();
+                id = 12;
                 break;
             case R.id.bt_ribencai:
-                Toast.makeText(getActivity(), "nihao9", Toast.LENGTH_LONG).show();
+                id = 17;
                 break;
             case R.id.bt_hanguocai:
-                Toast.makeText(getActivity(), "nihao10", Toast.LENGTH_LONG).show();
+                id = 18;
                 break;
             case R.id.bt_faguocai:
-                Toast.makeText(getActivity(), "nihao11", Toast.LENGTH_LONG).show();
+                id = 125;
                 break;
             case R.id.bt_yidalicai:
-                Toast.makeText(getActivity(), "nihao12", Toast.LENGTH_LONG).show();
+                id = 124;
                 break;
             case R.id.bt_taiguocai:
-                Toast.makeText(getActivity(), "nihao13", Toast.LENGTH_LONG).show();
+                id = 123;
                 break;
             case R.id.bt_mianshi:
-                Toast.makeText(getActivity(), "nihao14", Toast.LENGTH_LONG).show();
+                id = 66;
                 break;
             case R.id.bt_mifan:
-                Toast.makeText(getActivity(), "nihao15", Toast.LENGTH_LONG).show();
+                id = 64;
                 break;
             case R.id.bt_binglei:
-                Toast.makeText(getActivity(), "nihao16", Toast.LENGTH_LONG).show();
+                id = 68;
                 break;
             case R.id.bt_zhou:
-                Toast.makeText(getActivity(), "nihao17", Toast.LENGTH_LONG).show();
+                id = 65;
                 break;
             case R.id.bt_dangao:
-                Toast.makeText(getActivity(), "nihao18", Toast.LENGTH_LONG).show();
+                id = 73;
                 break;
             case R.id.bt_mianbao:
-                Toast.makeText(getActivity(), "nihao19", Toast.LENGTH_LONG).show();
+                id = 74;
                 break;
             case R.id.bt_binggan:
-                Toast.makeText(getActivity(), "nihao20", Toast.LENGTH_LONG).show();
+                id = 75;
                 break;
             case R.id.bt_pisa:
-                Toast.makeText(getActivity(), "nihao21", Toast.LENGTH_LONG).show();
+                id = 76;
                 break;
             case R.id.bt_zhurou:
-                Toast.makeText(getActivity(), "nihao22", Toast.LENGTH_LONG).show();
+                id = 182;
                 break;
             case R.id.bt_yangrou:
-                Toast.makeText(getActivity(), "nihao23", Toast.LENGTH_LONG).show();
+                id = 183;
                 break;
             case R.id.bt_niurou:
-                Toast.makeText(getActivity(), "nihao24", Toast.LENGTH_LONG).show();
+                id = 184;
                 break;
             case R.id.bt_jirou:
-                Toast.makeText(getActivity(), "nihao25", Toast.LENGTH_LONG).show();
+                id = 191;
                 break;
             case R.id.bt_yarou:
-                Toast.makeText(getActivity(), "nihao26", Toast.LENGTH_LONG).show();
+                id = 195;
                 break;
             case R.id.bt_caoyu:
-                Toast.makeText(getActivity(), "nihao27", Toast.LENGTH_LONG).show();
+                id = 201;
                 break;
             case R.id.bt_luyu:
-                Toast.makeText(getActivity(), "nihao28", Toast.LENGTH_LONG).show();
+                id = 202;
                 break;
             case R.id.bt_daiyu:
-                Toast.makeText(getActivity(), "nihao29", Toast.LENGTH_LONG).show();
+                id = 203;
                 break;
             case R.id.bt_sanwenyu:
-                Toast.makeText(getActivity(), "nihao30", Toast.LENGTH_LONG).show();
+                id = 204;
                 break;
             case R.id.bt_xiaren:
-                Toast.makeText(getActivity(), "nihao31", Toast.LENGTH_LONG).show();
+                id = 205;
                 break;
             case R.id.bt_wenge:
-                Toast.makeText(getActivity(), "nihao32", Toast.LENGTH_LONG).show();
+                id = 206;
                 break;
             case R.id.bt_jidan:
-                Toast.makeText(getActivity(), "nihao33", Toast.LENGTH_LONG).show();
+                id = 194;
                 break;
             case R.id.bt_anchundan:
-                Toast.makeText(getActivity(), "nihao34", Toast.LENGTH_LONG).show();
+                id = 199;
                 break;
             case R.id.bt_xiandan:
-                Toast.makeText(getActivity(), "nihao35", Toast.LENGTH_LONG).show();
+                id = 197;
                 break;
             case R.id.bt_pidan:
-                Toast.makeText(getActivity(), "nihao36", Toast.LENGTH_LONG).show();
+                id = 198;
                 break;
             case R.id.bt_qiezi:
-                Toast.makeText(getActivity(), "nihao37", Toast.LENGTH_LONG).show();
+                id = 210;
                 break;
             case R.id.bt_huluobo:
-                Toast.makeText(getActivity(), "nihao38", Toast.LENGTH_LONG).show();
+                id = 211;
                 break;
             case R.id.bt_baicai:
-                Toast.makeText(getActivity(), "nihao39", Toast.LENGTH_LONG).show();
+                id = 212;
                 break;
             case R.id.bt_wosun:
-                Toast.makeText(getActivity(), "nihao40", Toast.LENGTH_LONG).show();
+                id = 213;
                 break;
             case R.id.bt_shengcai:
-                Toast.makeText(getActivity(), "nihao41", Toast.LENGTH_LONG).show();
+                id = 214;
                 break;
             case R.id.bt_xilanhua:
-                Toast.makeText(getActivity(), "nihao42", Toast.LENGTH_LONG).show();
+                id = 217;
                 break;
             case R.id.bt_xihongshi:
-                Toast.makeText(getActivity(), "nihao43", Toast.LENGTH_LONG).show();
+                id = 216;
                 break;
             case R.id.bt_shanyao:
-                Toast.makeText(getActivity(), "nihao44", Toast.LENGTH_LONG).show();
+                id = 215;
                 break;
             case R.id.bt_guozhi:
-                Toast.makeText(getActivity(), "nihao45", Toast.LENGTH_LONG).show();
+                id = 83;
                 break;
             case R.id.bt_dunpin:
-                Toast.makeText(getActivity(), "nihao46", Toast.LENGTH_LONG).show();
+                id = 84;
                 break;
             case R.id.bt_guochayinpin:
-                Toast.makeText(getActivity(), "nihao47", Toast.LENGTH_LONG).show();
+                id = 88;
                 break;
             case R.id.bt_bingpin:
-                Toast.makeText(getActivity(), "nihao48", Toast.LENGTH_LONG).show();
+                id = 89;
                 break;
             case R.id.bt_tanggeng:
-                Toast.makeText(getActivity(), "nihao49", Toast.LENGTH_LONG).show();
+                id = 82;
                 break;
             case R.id.bt_tangshui:
-                Toast.makeText(getActivity(), "nihao50", Toast.LENGTH_LONG).show();
+                id = 85;
                 break;
-
         }
-
+        Intent intent = new Intent(context, GetMenuActivity.class);
+        intent.putExtra("ID", id);
+        startActivity(intent);//向getmenuactivity传入id,并启动getmenuactivity
     }
 }

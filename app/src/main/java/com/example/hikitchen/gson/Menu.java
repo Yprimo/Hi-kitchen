@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by 杨凯-pc on 2019/3/13.
  */
-
+//菜谱类
 public class Menu {
     public int id;
     public String title;
@@ -55,9 +55,7 @@ public class Menu {
     public void setBurden(String burden) {
         this.burden = burden;
     }
-    public String getAlbums() {
-        return albums;
-    }
+    public String getAlbums() { return albums;}
     public void setAlbums(String albums) {
         this.albums = albums;
     }

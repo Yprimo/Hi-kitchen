@@ -5,7 +5,7 @@
     android:layout_height="48dp"
     android:id="@+id/ly_top_bar"
     android:background="@color/background_topbar">
-
+        //顶部布局
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

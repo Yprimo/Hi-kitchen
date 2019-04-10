@@ -18,10 +18,8 @@ import java.util.Map;
 /**
  * Created by 杨凯-pc on 2019/3/13.
  */
-
+//解析json数据
 public class Utility {
-
-
     public static Result handleMenuResponse(String response){
         try {
             Result result=new Result();
