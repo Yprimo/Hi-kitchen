@@ -1,6 +1,7 @@
 package com.example.hikitchen.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.hikitchen.GetMenuActivity;
 import com.example.hikitchen.R;
+import com.example.hikitchen.ShowMenuContentActivity;
 import com.example.hikitchen.gson.Menu;
 
 import org.w3c.dom.Text;
@@ -34,12 +36,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     private List<Menu> mMenuList = new ArrayList<>();
     Context ctx;
     static class ViewHolder extends RecyclerView.ViewHolder {
+        View menuView;
         ImageView menuImage;
         TextView menutitle;
         TextView menuingre;
         TextView menuburden;
         public ViewHolder(View view) {
             super(view);
+            menuView=view;
             //初始化各控件
             menuImage = (ImageView) view.findViewById(R.id.menu_image);//菜谱标签图片
             menutitle = (TextView) view.findViewById(R.id.menu_title);//菜谱名字
@@ -56,7 +60,16 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_item, parent, false);
-        ViewHolder holder = new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        holder.menuView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                int position=holder.getAdapterPosition();
+                Menu menu=mMenuList.get(position);
+                Intent intent = new Intent(v.getContext(), ShowMenuContentActivity.class);
+                intent.putExtra("menu_data",menu);
+                v.getContext().startActivity(intent);
+            }
+        });
         return holder;
     }
 

@@ -2,6 +2,7 @@ package com.example.hikitchen.gson;
 
 import org.json.JSONArray;
 
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by 杨凯-pc on 2019/3/13.
  */
 //菜谱类
-public class Menu {
+public class Menu implements Serializable {//实现序列化接口，使得intent可以传递menu对象
     public int id;
     public String title;
     public String tags;//标签
