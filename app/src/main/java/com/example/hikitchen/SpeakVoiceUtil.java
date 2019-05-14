@@ -264,17 +264,7 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
             bags.add(getSpeechSynthesizeBag(steps.step, Integer.toString(i++)));
         int result = mSpeechSynthesizer.batchSpeak(bags);
         checkResult(result, "batchSpeak");
-        mHandler = new Handler() {
-            /**
-             * handleMessage接收消息后进行相应的处理
-             * @param msg
-             */
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
 
-            }
-        };
     }
 
     private SpeechSynthesizeBag getSpeechSynthesizeBag(String text, String utteranceId) {

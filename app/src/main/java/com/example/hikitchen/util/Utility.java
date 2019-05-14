@@ -1,19 +1,13 @@
 package com.example.hikitchen.util;
 
-import android.util.Log;
-
 import com.example.hikitchen.gson.Menu;
 import com.example.hikitchen.gson.Result;
 import com.example.hikitchen.gson.Steps;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by 杨凯-pc on 2019/3/13.
@@ -31,7 +25,7 @@ public class Utility {
             result.reason=jsonObject.getString("reason");
             String result1 = jsonObject.getString("result");
             JSONObject jsonObject1 = new JSONObject(result1);
-            JSONArray jsonArray = jsonObject1.getJSONArray("data");
+            JSONArray jsonArray = jsonObject1.getJSONArray( "data");
             for (int i = 0; i < jsonArray.length(); i++) {
                 Menu menu=new Menu();
                 menu.stepslist=new ArrayList<>();          //要初始化

@@ -1,32 +1,20 @@
 package com.example.hikitchen;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Toast;
 
-import com.example.hikitchen.R;
 import com.example.hikitchen.adapter.MenuAdapter;
-import com.example.hikitchen.gson.Menu;
 import com.example.hikitchen.gson.Result;
-import com.example.hikitchen.gson.Steps;
 import com.example.hikitchen.util.HttpUtil;
 import com.example.hikitchen.util.Utility;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Response;
@@ -34,7 +22,7 @@ import okhttp3.Response;
 public class GetMenuActivity extends AppCompatActivity {
 
     public static final String APPKEY = "d2c5e49da009dfdadebf957e66c40556";//申请到的菜谱接口key
-    static int id1=-1;//判断是否是上一次刚
+    static int id1=-1;//判断是否是上一次刚请求的菜谱列表
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_menu);
