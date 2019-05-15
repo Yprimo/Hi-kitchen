@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.hikitchen.gson.Menu;
@@ -33,16 +34,18 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
     private TextView burdenMenu;
     private LinearLayout stepsLayout;
     private ImageView imageBf;
+    private ImageView imageYy;
+    private ImageView imageSc;
     boolean isChanged = false;
+    boolean isChanged1 = false;
+    boolean isChanged2 = false;
     private Menu menu;
     private int i = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_content);
-
         initPermission();
-
         EventBus.getDefault().register(this);
         menu = (Menu) getIntent().getSerializableExtra("menu_data");//得到menu对象
         //初始化各控件
@@ -54,6 +57,11 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
         burdenMenu = (TextView) findViewById(R.id.burden_menu);
         imageBf = (ImageView) findViewById(R.id.image_bf);
         imageBf.setOnClickListener(this);
+        imageYy=(ImageView)findViewById(R.id.image_yy);
+        imageYy.setOnClickListener(this);
+        imageSc=(ImageView)findViewById(R.id.image_sc);
+        imageSc.setOnClickListener(this);
+
         stepsLayout = (LinearLayout) findViewById(R.id.steps_layout);
         //给控件赋值
         titleMenu.setText(menu.title);
@@ -95,7 +103,26 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
                 }
                 isChanged = !isChanged;
                 break;
+            case R.id.image_yy:
+                if (isChanged1) {
+                    imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_gyy));
 
+                } else {
+                    imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_kyy));
+
+                }
+                isChanged1 = !isChanged1;
+                break;
+            case R.id.image_sc:
+                if (isChanged2) {
+                    imageSc.setImageDrawable(getResources().getDrawable(R.mipmap.tab_qsc));
+                    Toast.makeText(ShowMenuContentActivity.this, "取消收藏成功", Toast.LENGTH_SHORT).show();
+                } else {
+                    imageSc.setImageDrawable(getResources().getDrawable(R.mipmap.tab_sc));
+                    Toast.makeText(ShowMenuContentActivity.this, "收藏成功", Toast.LENGTH_SHORT).show();
+                }
+                isChanged2 = !isChanged2;
+                break;
         }
     }
 
