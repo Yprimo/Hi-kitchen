@@ -1,4 +1,4 @@
-package com.example.hikitchen;
+package com.example.hikitchen.interfaces;
 
 /**
  * Created by fujiayi on 2017/9/13.

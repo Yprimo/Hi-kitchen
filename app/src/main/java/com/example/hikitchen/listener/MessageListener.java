@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.baidu.tts.client.SpeechError;
 import com.baidu.tts.client.SpeechSynthesizerListener;
-import com.example.hikitchen.MainHandlerConstant;
+import com.example.hikitchen.interfaces.MainHandlerConstant;
 
 /**
  * SpeechSynthesizerListener 简单地实现，仅仅记录日志

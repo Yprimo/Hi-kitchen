@@ -1,4 +1,4 @@
-package com.example.hikitchen;
+package com.example.hikitchen.util;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -13,9 +13,9 @@ import com.baidu.tts.client.SpeechSynthesizeBag;
 import com.baidu.tts.client.SpeechSynthesizer;
 import com.baidu.tts.client.SpeechSynthesizerListener;
 import com.baidu.tts.client.TtsMode;
+import com.example.hikitchen.eventbus.Event;
 import com.example.hikitchen.control.InitConfig;
 import com.example.hikitchen.gson.Steps;
-import com.example.hikitchen.util.AutoCheck;
 
 import org.greenrobot.eventbus.EventBus;
 

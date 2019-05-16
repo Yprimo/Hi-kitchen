@@ -1,4 +1,4 @@
-package com.example.hikitchen;
+package com.example.hikitchen.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.example.hikitchen.R;
 import com.example.hikitchen.adapter.MenuAdapter;
 import com.example.hikitchen.gson.Result;
 import com.example.hikitchen.util.HttpUtil;

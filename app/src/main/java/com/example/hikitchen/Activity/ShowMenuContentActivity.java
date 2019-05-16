@@ -1,5 +1,5 @@
 
-package com.example.hikitchen;
+package com.example.hikitchen.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -15,6 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.hikitchen.eventbus.Event;
+import com.example.hikitchen.R;
+import com.example.hikitchen.util.RecogUtil;
+import com.example.hikitchen.util.SpeakVoiceUtil;
 import com.example.hikitchen.gson.Menu;
 import com.example.hikitchen.gson.Steps;
 
@@ -106,10 +110,11 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
             case R.id.image_yy:
                 if (isChanged1) {
                     imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_gyy));
-
+                    RecogUtil.getInstance(getApplicationContext()).stop();
                 } else {
                     imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_kyy));
-
+                    RecogUtil.getInstance(getApplicationContext()).start();
+                   // RecogUtil.getInstance(getApplicationContext()).start();
                 }
                 isChanged1 = !isChanged1;
                 break;
@@ -123,11 +128,14 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
                 }
                 isChanged2 = !isChanged2;
                 break;
+            default:
+                break;
         }
     }
 
     private void initPermission() {
         String permissions[] = {
+                Manifest.permission.RECORD_AUDIO,
                 Manifest.permission.INTERNET,
                 Manifest.permission.ACCESS_NETWORK_STATE,
                 Manifest.permission.MODIFY_AUDIO_SETTINGS,
@@ -163,8 +171,36 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
         if(event.getMsg().equals("1000")) {
             imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_zt));
             isChanged = !isChanged;
+            imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_gyy));
+            isChanged1 = !isChanged1;
             i=0;
+            Toast.makeText(ShowMenuContentActivity.this,"播报结束",Toast.LENGTH_SHORT).show();
+            RecogUtil.getInstance(getApplicationContext()).stop();
+
         }
+        if(event.getMsg().equals("开始播报")){
+            imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_bf));
+            isChanged = !isChanged;
+            if (SpeakVoiceUtil.getInstance(getApplicationContext()).flag!=2) {
+                //    for (Steps steps : menu.stepslist) {
+                //       SpeakVoiceUtil.getInstance(getApplicationContext()).speak(steps.step);
+                SpeakVoiceUtil.getInstance(getApplicationContext()).batchSpeak(menu.stepslist);
+                //  }
+            } else {
+                SpeakVoiceUtil.getInstance(getApplicationContext()).resume();
+            }
+        }
+        if(event.getMsg().equals("暂停")) {
+            imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_zt));
+            isChanged = !isChanged;
+            SpeakVoiceUtil.getInstance(getApplicationContext()).pause();
+        }
+        if(event.getMsg().equals("继续")){
+            imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_bf));
+            isChanged = !isChanged;
+            SpeakVoiceUtil.getInstance(getApplicationContext()).resume();
+        }
+
     }
 
     protected void onDestroy(){

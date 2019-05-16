@@ -10,7 +10,7 @@ import com.baidu.tts.auth.AuthInfo;
 import com.baidu.tts.client.SpeechSynthesizeBag;
 import com.baidu.tts.client.SpeechSynthesizer;
 import com.baidu.tts.client.TtsMode;
-import com.example.hikitchen.MainHandlerConstant;
+import com.example.hikitchen.interfaces.MainHandlerConstant;
 
 import java.util.ArrayList;
 import java.util.List;

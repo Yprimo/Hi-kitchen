@@ -1,16 +1,19 @@
-package com.example.hikitchen;
+package com.example.hikitchen.activity;
 
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.support.v4.app.FragmentTransaction;
 
-
+import com.example.hikitchen.fragment.CommunityFragment;
+import com.example.hikitchen.fragment.HomeFragment;
+import com.example.hikitchen.fragment.KindsFragment;
+import com.example.hikitchen.fragment.MyFragment;
+import com.example.hikitchen.R;
 
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {

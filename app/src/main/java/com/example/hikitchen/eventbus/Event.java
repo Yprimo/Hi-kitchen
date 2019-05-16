@@ -1,4 +1,4 @@
-package com.example.hikitchen;
+package com.example.hikitchen.eventbus;
 
 /**
  * Created by Administrator on 2019/5/12.

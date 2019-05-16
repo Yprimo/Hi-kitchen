@@ -2,27 +2,18 @@ package com.example.hikitchen.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.hikitchen.GetMenuActivity;
 import com.example.hikitchen.R;
-import com.example.hikitchen.ShowMenuContentActivity;
+import com.example.hikitchen.activity.ShowMenuContentActivity;
 import com.example.hikitchen.gson.Menu;
 
-import org.w3c.dom.Text;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
