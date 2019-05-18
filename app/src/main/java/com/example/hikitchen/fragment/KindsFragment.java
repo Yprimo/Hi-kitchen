@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import com.example.hikitchen.R;
 import com.example.hikitchen.activity.GetMenuActivity;
@@ -24,6 +25,7 @@ import com.example.hikitchen.activity.GetMenuActivity;
  */
 public class KindsFragment extends Fragment implements View.OnClickListener {
     //private String content;
+
     public static KindsFragment newInstance() {
         KindsFragment newFragment = new KindsFragment();
         // Bundle bundle = new Bundle();
@@ -37,6 +39,7 @@ public class KindsFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_kinds, container, false);
         //TextView txt_content = (TextView) view.findViewById(R.id.fg_kinds);
         //txt_content.setText(content);
+
 
         return view;
     }

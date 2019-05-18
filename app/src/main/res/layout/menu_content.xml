@@ -154,7 +154,7 @@
                     android:layout_marginTop="5dp"
                     android:src="@mipmap/tab_qsc"
                     android:background="@color/background_white"
-                    android:paddingLeft="235dp"/>
+                    android:paddingLeft="237dp"/>
             </LinearLayout>
 
             <LinearLayout

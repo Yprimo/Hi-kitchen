@@ -2,6 +2,7 @@
 package com.example.hikitchen.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -15,12 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.hikitchen.eventbus.Event;
 import com.example.hikitchen.R;
-import com.example.hikitchen.util.RecogUtil;
-import com.example.hikitchen.util.SpeakVoiceUtil;
+import com.example.hikitchen.eventbus.Event;
 import com.example.hikitchen.gson.Menu;
 import com.example.hikitchen.gson.Steps;
+import com.example.hikitchen.service.ListenService;
+import com.example.hikitchen.util.SpeakVoiceUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -110,11 +111,15 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
             case R.id.image_yy:
                 if (isChanged1) {
                     imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_gyy));
-                    RecogUtil.getInstance(getApplicationContext()).stop();
+              //      RecogUtil.getInstance(getApplicationContext()).stop();
+                    Intent stopIntent=new Intent(this,ListenService.class);
+                    stopService(stopIntent);
+
                 } else {
                     imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_kyy));
-                    RecogUtil.getInstance(getApplicationContext()).start();
-                   // RecogUtil.getInstance(getApplicationContext()).start();
+                //    RecogUtil.getInstance(getApplicationContext()).start();
+                    Intent startIntent=new Intent(this,ListenService.class);
+                    startService(startIntent);
                 }
                 isChanged1 = !isChanged1;
                 break;
@@ -175,7 +180,9 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
             isChanged1 = !isChanged1;
             i=0;
             Toast.makeText(ShowMenuContentActivity.this,"播报结束",Toast.LENGTH_SHORT).show();
-            RecogUtil.getInstance(getApplicationContext()).stop();
+            Intent stopIntent=new Intent(this,ListenService.class);
+            stopService(stopIntent);
+         //   RecogUtil.getInstance(getApplicationContext()).stop();
 
         }
         if(event.getMsg().equals("开始播报")){

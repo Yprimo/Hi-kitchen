@@ -30,8 +30,8 @@ public class MyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my,container,false);
-        TextView txt_content = (TextView) view.findViewById(R.id.fg_my);
-        txt_content.setText(content);
+      //  TextView txt_content = (TextView) view.findViewById(R.id.fg_my);
+    //    txt_content.setText(content);
         return view;
     }
     public void onCreate(Bundle savedInstanceState) {
