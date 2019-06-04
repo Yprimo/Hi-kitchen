@@ -220,8 +220,6 @@ public class RecogUtil implements EventListener {
 
                 }
             }*/
-
-
         } else if (data != null) {
             logTxt += " ;data length=" + data.length;
         }

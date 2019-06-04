@@ -42,6 +42,7 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
      * 发布时请替换成自己申请的appId appKey 和 secretKey。注意如果需要离线合成功能,请在您申请的应用中填写包名。
      * 本demo的包名是com.baidu.tts.sample，定义在build.gradle中。
      */
+    private int i = 1;
     protected String appId = "10860981";
     protected static Context ctx;
     protected String appKey = "dqA7EwPfpX4oa5dPh684KnX4";
@@ -76,7 +77,7 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
 
     protected SpeechSynthesizer mSpeechSynthesizer;
 
-    private static SpeakVoiceUtil speakVoiceUtil;
+    public static SpeakVoiceUtil speakVoiceUtil;
 
     public static SpeakVoiceUtil getInstance(Context context) {
         ctx = context;
@@ -149,7 +150,7 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
         // 设置合成的音量，0-9 ，默认 5
         mSpeechSynthesizer.setParam(SpeechSynthesizer.PARAM_VOLUME, "9");
         // 设置合成的语速，0-9 ，默认 5
-        mSpeechSynthesizer.setParam(SpeechSynthesizer.PARAM_SPEED, "8");
+        mSpeechSynthesizer.setParam(SpeechSynthesizer.PARAM_SPEED, "6");
         // 设置合成的语调，0-9 ，默认 5
         mSpeechSynthesizer.setParam(SpeechSynthesizer.PARAM_PITCH, "5");
 
@@ -259,9 +260,9 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
     public void batchSpeak(List<Steps> stepslist) {
 
         List<SpeechSynthesizeBag> bags = new ArrayList<SpeechSynthesizeBag>();
-        int i = 1;
         for (Steps steps : stepslist)
             bags.add(getSpeechSynthesizeBag(steps.step, Integer.toString(i++)));
+        i--;
         int result = mSpeechSynthesizer.batchSpeak(bags);
         checkResult(result, "batchSpeak");
 
@@ -309,6 +310,7 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
             mSpeechSynthesizer.stop();
             mSpeechSynthesizer.release();
             mSpeechSynthesizer = null;
+            flag=1;
             Log.i("你好", "释放资源成功");
         }
     }
@@ -340,10 +342,11 @@ public class SpeakVoiceUtil implements SpeechSynthesizerListener {
     }
     @Override
     public void onSpeechFinish(String s) {
-        if (s.equals("5")) {
+        if (s.equals(String.valueOf(i))) {
             flag = 1000;
             EventBus.getDefault().post(new Event("1000"));
         }
+        flag=1;
     }
 
     @Override

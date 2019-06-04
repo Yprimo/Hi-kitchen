@@ -45,7 +45,9 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
     boolean isChanged1 = false;
     boolean isChanged2 = false;
     private Menu menu;
-    private int i = 0;
+    boolean flagyy=false;
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,7 +93,7 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.image_bf:
-                i++;
+
                 if (isChanged) {
                     imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_zt));
                     SpeakVoiceUtil.getInstance(getApplicationContext()).pause();
@@ -114,10 +116,11 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
               //      RecogUtil.getInstance(getApplicationContext()).stop();
                     Intent stopIntent=new Intent(this,ListenService.class);
                     stopService(stopIntent);
-
+                    flagyy=false;
                 } else {
                     imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_kyy));
                 //    RecogUtil.getInstance(getApplicationContext()).start();
+                    flagyy=true;
                     Intent startIntent=new Intent(this,ListenService.class);
                     startService(startIntent);
                 }
@@ -178,14 +181,13 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
             isChanged = !isChanged;
             imageYy.setImageDrawable(getResources().getDrawable(R.mipmap.tab_gyy));
             isChanged1 = !isChanged1;
-            i=0;
             Toast.makeText(ShowMenuContentActivity.this,"播报结束",Toast.LENGTH_SHORT).show();
             Intent stopIntent=new Intent(this,ListenService.class);
             stopService(stopIntent);
          //   RecogUtil.getInstance(getApplicationContext()).stop();
 
         }
-        if(event.getMsg().equals("开始播报")){
+        if(event.getMsg().equals("开始播放")||event.getMsg().equals("开始播报")){
             imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_bf));
             isChanged = !isChanged;
             if (SpeakVoiceUtil.getInstance(getApplicationContext()).flag!=2) {
@@ -197,12 +199,12 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
                 SpeakVoiceUtil.getInstance(getApplicationContext()).resume();
             }
         }
-        if(event.getMsg().equals("暂停")) {
+        if(event.getMsg().equals("暂停")||event.getMsg().equals("暂停播报")) {
             imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_zt));
             isChanged = !isChanged;
             SpeakVoiceUtil.getInstance(getApplicationContext()).pause();
         }
-        if(event.getMsg().equals("继续")){
+        if(event.getMsg().equals("继续")||event.getMsg().equals("继续播放")||event.getMsg().equals("继续播报")){
             imageBf.setImageDrawable(getResources().getDrawable(R.mipmap.tab_bf));
             isChanged = !isChanged;
             SpeakVoiceUtil.getInstance(getApplicationContext()).resume();
@@ -213,6 +215,21 @@ public class ShowMenuContentActivity extends AppCompatActivity implements View.O
     protected void onDestroy(){
         super.onDestroy();
         EventBus.getDefault().unregister(this);//反注册EventBus
+    }
+    @Override
+    public void onBackPressed() {
+        //TODO something
+       // SpeakVoiceUtil.getInstance(getApplicationContext()).cancelResource();
+       // Intent stopIntent=new Intent(this,ListenService.class);
+       // stopService(stopIntent);
+        if(SpeakVoiceUtil.getInstance(getApplicationContext()).flag!=1000&&SpeakVoiceUtil.getInstance(getApplicationContext()).flag!=1)
+            SpeakVoiceUtil.getInstance(getApplicationContext()).cancelResource();
+        if(flagyy==true) {
+            Intent stopIntent = new Intent(this, ListenService.class);
+            stopService(stopIntent);
+        }
+        SpeakVoiceUtil.speakVoiceUtil=null;
+        super.onBackPressed();
     }
 }
 

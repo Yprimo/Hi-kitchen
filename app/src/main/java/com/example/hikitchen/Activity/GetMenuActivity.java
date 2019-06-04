@@ -67,7 +67,7 @@ public class GetMenuActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(GetMenuActivity.this, "获取菜谱信息失败2", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GetMenuActivity.this, "获取菜谱信息失败", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
